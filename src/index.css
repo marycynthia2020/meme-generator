@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: #e9e3fe;
+}
+
+#root {
+  width: 100%;
+
+  @media (min-width: 1023px) {
+    width: 50%;
+  }
+}
