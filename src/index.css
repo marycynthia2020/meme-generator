@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Sketch&display=swap');
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -16,4 +19,30 @@ body{
   @media (min-width: 1023px) {
     width: 50%;
   }
+
+  @media (min-width: 1441px) {
+    width: 30%;
+  }
+}
+.text {
+  width: 90%;
+  position: absolute;
+  z-index: 10;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  font-size: 1em;
+  letter-spacing: 1px;
+  text-shadow:
+        2px 2px 0 #000,
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px 2px 0 #000,
+        0 2px 0 #000,
+        2px 0 0 #000,
+        0 -2px 0 #000,
+        -2px 0 0 #000,
+        2px 2px 5px #000;
 }

@@ -1,20 +1,36 @@
-import React from 'react'
+const Form = ({formData, setFormData}) => {
 
-const Form = () => {
+  function handleChange(e) {
+    const { name, value} = e.target
+    setFormData(prevData => {
+        return {
+            ...prevData, [name]:value
+        }
+    })
+  }
+
+ console.log(formData)
   return (
-    <form className='w-full  mx-auto flex flex-col lg:flex-row  gap-4 p-2 lg:items-center lg:justify mb-4' >
-        <input 
-        type="text" 
-        className='border-2 h-10 p-2 lg:w-1/2'
-        placeholder='enetr a top text'
-        />
-        <input 
+    <form className="w-[95%]  mx-auto flex flex-col lg:flex-row  gap-4 p-2 lg:items-center lg:justify mb-4">
+      <input
         type="text"
-        className='border-2 h-10 p-2 lg:w-1/2'
-        placeholder='enetr a bottom text' 
-        />
-    </form>
-  )
-}
+        className="border-2 h-10 p-2 lg:w-1/2 "
+        placeholder="Top text"
+        name="topText"
+        onChange={handleChange}
+        value={formData.topText}
 
-export default Form
+      />
+      <input
+        type="text"
+        className="border-2 h-10 p-2 lg:w-1/2"
+        placeholder="Bottom text"
+        name="bottomText"
+        onChange={handleChange}
+        value={formData.bottomText}
+      />
+    </form>
+  );
+};
+
+export default Form;
