@@ -29,7 +29,7 @@ function App() {
   return (
     <div
       className="w-full 
-     mx-auto bg-white border-2 border-red-400  pb-6 "
+     mx-auto bg-white  pb-6 "
     >
       <Header />
       <Form  formData={formData} setFormData={setFormData}/>
